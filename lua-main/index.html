@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="YourLocalMoon" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Mods - GMOD 9 Guide</title>
+    <title>Main - GMOD 9 Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Mods";
-        var mkdocs_page_input_path = "modding.md";
+        var mkdocs_page_name = "Main";
+        var mkdocs_page_input_path = "lua-main.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -41,21 +41,23 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Getting Started</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Main</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../downloading/">Downloading</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../lan/">LAN</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Mods</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../modding/">Mods</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Lua</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../lua-main/">Main</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Main</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#features-of-lua">Features of Lua:</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../cheatsheet/">Cheatsheet</a>
                   </li>
@@ -79,10 +81,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Getting Started &raquo;</li>
-      <li>Mods</li>
+          <li>Lua &raquo;</li>
+      <li>Main</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/TheLocalMoon/gmod9-guide/edit/master/docs/modding.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/TheLocalMoon/gmod9-guide/edit/master/docs/lua-main.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -90,14 +92,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="mods">Mods<a class="headerlink" href="#mods" title="Permanent link">&para;</a></h1>
-<p>In order to download mods for GMOD 9, all you need to do is to download the mod from <a href="https://gamebanana.com/games/26">GameBanana</a>, put it into your &ldquo;<em>mods</em>&rdquo; folder of the GMOD 9 path and BOOM! You have the mod installed. Even if it a map, you can just check if you did install it, and if not, you need to goto the mod folder, then find the map(s) you want to install, copy it/them and paste them into the &ldquo;<em>maps</em>&rdquo; folder of your GMOD 9 path.</p>
+                <h1 id="introduction-to-lua">Introduction to Lua<a class="headerlink" href="#introduction-to-lua" title="Permanent link">&para;</a></h1>
+<p>Lua is a lightweight, powerful, and efficient scripting language that was designed with embedded systems in mind. It was first released in 1993 and has since gained popularity for its simplicity, flexibility, and ease of integration into existing software projects. Lua is commonly used as a scripting language in video games, embedded systems, and other applications that require scripting capabilities.</p>
+<h2 id="features-of-lua">Features of Lua:<a class="headerlink" href="#features-of-lua" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lightweight: Lua has a small and efficient implementation, making it ideal for embedded systems and resource-constrained environments.</li>
+<li>Simple Syntax: Lua has a clean and intuitive syntax inspired by other scripting languages like Python, which makes it easy to learn and read.</li>
+<li>Dynamic Typing: Lua uses dynamic typing, allowing variables to hold values of any type. This flexibility makes Lua suitable for rapid prototyping and scripting tasks.</li>
+<li>Garbage Collection: Lua features automatic memory management through garbage collection, relieving developers from manual memory management tasks.</li>
+<li>Extensibility: Lua can be easily extended with C/C++ code, allowing developers to integrate Lua into existing applications or add custom functionality.</li>
+<li>Powerful Data Structures: Lua provides powerful built-in data structures such as tables, arrays, and associative arrays, making it versatile for various data manipulation tasks.</li>
+<li>LuaJIT: Lua Just-In-Time Compiler (LuaJIT) is a popular implementation of Lua that can significantly improve performance by dynamically compiling Lua code.</li>
+</ol>
+<p>To learn Lua and explore its various features, you can refer to the <a href="https://devhints.io/lua">Lua Cheatsheet</a>, which provides a quick reference guide for Lua syntax and commonly used functions.</p>
+<p>Additionally, the following resources can help you get started with Lua:</p>
+<ol>
+<li><a href="https://www.lua.org/">Official Lua Website</a>: The official Lua website provides documentation, tutorials, and resources for beginners and experienced Lua developers.</li>
+<li><a href="https://www.tutorialspoint.com/lua/index.htm">Lua Tutorial on tutorialspoint</a>: tutorialspoint offers a comprehensive Lua tutorial with interactive examples to help you understand the language fundamentals.</li>
+</ol>
+<p>With these resources, you&rsquo;ll be equipped to start your journey with Lua and explore its capabilities as a versatile scripting language. Happy scripting and creating mods for GMOD 9!</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../lan/" class="btn btn-neutral float-left" title="LAN"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../lua-main/" class="btn btn-neutral float-right" title="Main">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../modding/" class="btn btn-neutral float-left" title="Mods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cheatsheet/" class="btn btn-neutral float-right" title="Cheatsheet">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -124,10 +143,10 @@
         </span>
     
     
-      <span><a href="../lan/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../modding/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../lua-main/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../cheatsheet/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

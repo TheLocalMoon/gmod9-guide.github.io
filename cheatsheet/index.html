@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="YourLocalMoon" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Cheatsheet - GMOD 9 Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cheatsheet";
+        var mkdocs_page_input_path = "cheatsheet.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> GMOD 9 Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Main</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloading/">Downloading</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../lan/">LAN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modding/">Mods</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lua</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../lua-main/">Main</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Cheatsheet</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#basic-syntax">Basic Syntax</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comments">Comments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operators">Operators</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#control-structures">Control Structures</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#if-else-statements">If-Else Statements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loops">For Loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#while-loops">While Loops</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-types">Data Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#numbers">Numbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#strings">Strings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booleans">Booleans</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions_1">Functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#defining-functions">Defining Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calling-functions">Calling Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#anonymous-functions">Anonymous Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variable-arguments">Variable Arguments</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#libraries">Libraries</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#standard-libraries">Standard Libraries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-libraries">Custom Libraries</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">GMOD 9 Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Lua &raquo;</li>
+      <li>Cheatsheet</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/TheLocalMoon/gmod9-guide/edit/master/docs/cheatsheet.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cheatsheet">Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Lua is a lightweight and flexible scripting language that is designed to be embedded in other programs. It has a simple syntax and is easy to learn, making it a popular choice for writing mods for Garry&rsquo;s Mod 9.</p>
+<h2 id="basic-syntax">Basic Syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
+<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- This is a comment</span>
+
+<span class="cm">--[[</span>
+<span class="cm">    This is a multiline comment,</span>
+<span class="cm">    and i can write more lines until infinity!</span>
+<span class="cm">]]</span><span class="c1">--</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- declaring a variable</span>
+<span class="kd">local</span> <span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+
+<span class="c1">-- assigning a new value to a variable</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;new value&quot;</span>
+
+<span class="c1">-- declaring multiple variables at once</span>
+<span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- arithmetic operators</span>
+<span class="o">+</span><span class="p">,</span> <span class="o">-</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">%</span><span class="p">,</span> <span class="o">^</span>
+
+<span class="c1">-- relational operators</span>
+<span class="o">==</span><span class="p">,</span> <span class="o">~=</span><span class="p">,</span> <span class="o">&lt;</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;=</span><span class="p">,</span> <span class="o">&gt;=</span>
+
+<span class="c1">-- logical operators</span>
+<span class="ow">and</span><span class="p">,</span> <span class="ow">or</span><span class="p">,</span> <span class="ow">not</span>
+
+<span class="c1">-- concatenating strings</span>
+<span class="o">..</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="control-structures">Control Structures<a class="headerlink" href="#control-structures" title="Permanent link">&para;</a></h3>
+<h4 id="if-else-statements">If-Else Statements<a class="headerlink" href="#if-else-statements" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">if</span> <span class="n">condition1</span> <span class="kr">then</span>
+<span class="c1">-- code to execute if condition1 is true</span>
+<span class="kr">elseif</span> <span class="n">condition2</span> <span class="kr">then</span>
+<span class="c1">-- code to execute if condition1 is false and condition2 is true</span>
+<span class="kr">else</span>
+<span class="c1">-- code to execute if both condition1 and condition2 are false</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h4 id="for-loops">For Loops<a class="headerlink" href="#for-loops" title="Permanent link">&para;</a></h4>
+<p><em>Note: increment is optional, by default, it&rsquo;s 1</em></p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="n">startValue</span><span class="p">,</span> <span class="n">endValue</span><span class="p">,</span> <span class="n">increment</span> <span class="kr">do</span>
+<span class="c1">-- loop body</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h4 id="while-loops">While Loops<a class="headerlink" href="#while-loops" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">while</span> <span class="n">condition</span> <span class="kr">do</span>
+<span class="c1">-- loop body, the condition can be true to make it an infinite loop</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<h3 id="numbers">Numbers<a class="headerlink" href="#numbers" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Single quoted string&#39;</span>
+<span class="kd">local</span> <span class="n">c</span> <span class="o">=</span> <span class="s">[[</span>
+<span class="s">    Multi-line string</span>
+<span class="s">    I can also write lines until infinity here!</span>
+<span class="s">]]</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="booleans">Booleans<a class="headerlink" href="#booleans" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h2>
+<h3 id="defining-functions">Defining Functions<a class="headerlink" href="#defining-functions" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">function</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="calling-functions">Calling Functions<a class="headerlink" href="#calling-functions" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1">-- print(result) outputs 5</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="anonymous-functions">Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">add</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="variable-arguments">Variable Arguments<a class="headerlink" href="#variable-arguments" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">function</span> <span class="nf">printArgs</span><span class="p">(...)</span>
+    <span class="kr">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">({...})</span> <span class="kr">do</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+</code></pre></div></td></tr></table></div>
+
+<h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
+<h3 id="standard-libraries">Standard Libraries<a class="headerlink" href="#standard-libraries" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- accessing the string library</span>
+<span class="kd">local</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">string.upper</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+<span class="c1">-- accessing the math library</span>
+<span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">math.cos</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="c1">-- accessing the table library</span>
+<span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">table.insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+<h3 id="custom-libraries">Custom Libraries<a class="headerlink" href="#custom-libraries" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- defining a custom library</span>
+<span class="n">mylib</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="kr">function</span> <span class="nc">mylib</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="kr">end</span>
+
+<span class="c1">-- using the custom library in another file</span>
+<span class="kd">local</span> <span class="n">mylib</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;mylib&#39;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">mylib</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+<h1 id="gmod-9-cheatsheet">GMOD 9 Cheatsheet<a class="headerlink" href="#gmod-9-cheatsheet" title="Permanent link">&para;</a></h1>
+<h2 id="player-related">Player-related<a class="headerlink" href="#player-related" title="Permanent link">&para;</a></h2>
+<p><code>_PlayerShowScoreboard(playerid)</code> - Shows the scoreboard on the specified players screen.<br />
+<code>_PlayerSetSprint(playerid, bool)</code> - Enable/Disable sprint for player.<br />
+<code>_PlayerFreeze(playerid, bool)</code> - Freeze the specified player.<br />
+<code>_PlayerGetShootPos(playerid)</code> - Returns the vector of the player&rsquo;s shoot position.<br />
+<code>_PlayerGetShootAng(playerid)</code> - Returns the forward vector of the player&rsquo;s shoot angle.<br />
+<code>_PlayerGetActiveWeapon(playerid)</code> - Returns the player&rsquo;s active weapon id.<br />
+<code>_PlayerKill(playerid)</code> - Kill the specified player.<br />
+<code>_PlayerGiveAmmo(playerid, amount, ammotype, playsounds)</code> - Give specified player ammo. <code>playsounds</code> is bool.<br />
+<code>_PlayerRespawn(playerid)</code> - Force player to respawn.<br />
+<code>_PlayerSetDrawTeamCircle(playerid, bool)</code> - Sets whether to draw the team circle or not.<br />
+<code>_PlayerInfo(playerid, request)</code> - Returns info about a specific layer. Check _PlayerInfo page for usage.<br />
+<code>_PlayerChangeTeam(playerid, teamid)</code> - Changes a player&rsquo;s team.<br />
+<code>_PlayerSetModel(playerid, model)</code> - Changes a player&rsquo;s model.<br />
+<code>_PlayerGetRandomAllowedModel()</code> - Returns a random allowed player model.
+<code>_PlayerSetHealth(playerid, health)</code> - Changes a player&rsquo;s health.<br />
+<code>_PlayerSetArmor(playerid, armor)</code> - Changes a player&rsquo;s armor.<br />
+<code>_PlayerSetMaxSpeed(playerid, speed)</code> - Changes a player&rsquo;s maximum speed.<br />
+<code>_PlayerAddScore(playerid, score)</code> - Add to players score (can be minus).<br />
+<code>_PlayerSetScore(playerid, score)</code> - Sets to players score.<br />
+<code>_PlayerAddDeath(playerid, score)</code> - Add to players deaths score (can be minus).<br />
+<code>_PlayerGiveItem(playerid, item)</code> - Give player named item.<br />
+<code>_PlayerGiveSWEP(playerid, script)</code> - Give player scripted weapon.<br />
+<code>_PlayerRemoveAllWeapons(playerid)</code> - Strip all o a player&rsquo;s weapons.<br />
+<code>_PlayerRemoveWeapon(playerid, item)</code> - Strip a specific weapon.<br />
+<code>_PlayerAllowDecalPaint(playerid)</code> - Allow the player to spraypaint now rather than waiting the 30 or so seconds.<br />
+<code>_PlayerSetDrawViewModel(playerid, bool)</code> - Sets whether to draw the player&rsquo;s view model.<br />
+<code>_PlayerSelectWeapon(playerid, item)</code> - Select weapon.<br />
+<code>_PlayerSetDrawWorldModel(playerid, bool)</code> - Sets whether to draw the player&rsquo;s world model.<br />
+<code>_PlayerOption(playerid, callback, timeout)</code> - Player has an option to select.<br />
+<code>_PlayerSetVecView(playerid, vector)</code> - Sets the position of the view vector (0, 0, 64) default.<br />
+<code>_PlayerIsKeyDown(playerid, key)</code> - Check whether specified key is pressed.<br />
+<code>_PlayerSpectatorStart(playerid, mode)</code> - Start spectating.<br />
+<code>_PlayerSpectatorTarget(playerid, target)</code> - Set spectator target for player.<br />
+<code>_PlayerSpectatorEnd(playerid)</code> - Stop spectating mode.<br />
+<code>_PlayerSetVecDuck(playerid, vector)</code> - Sets the position of the duck view vector (0, 0, 24) default.<br />
+<code>_ScreenText(playerid, message, x, y, r, g, b, a, fadeid, fadeout, holdtime, effect, channel)</code> - Advanced function to print text to the screen. <code>effect</code> can be set to 0-2 and <code>channel</code> 0-5.<br />
+<code>_PrintMessage(playerid, type, message)</code> - Print a message to a specific player.<br />
+<code>_PrintMessageAll()</code> - Is like <code>_PrintMessage()</code> but for everyone on the server.<br />
+<code>_PlayerPreferredModel(playerid)</code> - Returns the player&rsquo;s preferred model. Returns a blank if the model isn&rsquo;t valid.<br />
+<code>_PlayerSilentKill(playerid, respawn_time, dissolve)</code> - Silently kill a player.<br />
+<code>_PlayerDetonateTripmines(playerid)</code><br />
+<code>_PlayerHolsterWeapon(playerid)</code><br />
+<code>_PlayerSetFOV(playerid, fov, time)</code><br />
+<code>_PlayerSetFlashlight(playerid, state)</code><br />
+<code>_PlayerStopZooming(playerid)</code><br />
+<code>_PlayerSetChaseCamDistance(playerid, distance)</code><br />
+<code>_PlayerLockInPlace(playerid, bool)</code><br />
+<code>_PlayerRemoveAllAmmo(playerid)</code><br />
+<code>_PlayerDisableAttack(playerid, bool)</code><br />
+<code>_PlayerShowCrosshair(playerid, bool)</code><br />
+<code>_PlayerEnableSprint(playerid, bool)</code><br />
+<code>_PlayerViewModelSequence(playerid, sequence)</code> - If successful returns the length of the sequence in seconds.<br />
+<code>_PlayerGetLimit(playerid, limit)</code><br />
+<code>_PlayerSetAnimation(playerid, sequence)</code> - Sets a player&rsquo;s animation.<br />
+<code>_PlayerSetWeaponSequence(player, sequence)</code> - Sets a players weapon activity.<br />
+<code>_PlayerIsCrouching(playerid)</code> - Returns true if a player is crouching.<br />
+<code>_PlayerUseVehicle(playerid, vehicle)</code> - Make a player attempt to enter a vehicle.<br />
+<code>_PlayerGod(playerid, bool)</code> - Give a player God Mode.<br />
+<code>_PlayerHasWeapon(playerid, item)</code> - Returns true if the player has this weapon.<br />
+<code>_PlayerWeaponTranslateSequence(player, sequence)</code> - Let the player&rsquo;s weapon decide how we should act out specific sequence.<br />
+<code>_player.ShowPanel</code> - Show/Hide a panel by name.<br />
+<code>_player.SetContextMenu(playerid, name)</code> - Set the player&rsquo;s context menu.<br />
+<code>_player.GetFlashlight(player)</code> - returns true if flashlight is on.<br />
+<code>_player.SetFlashlight(player, on)</code> - Set player FL on/off.<br />
+<code>_player.LastHitGroup(player)</code> - Get the las place the player was hit.<br />
+<code>_player.ShouldDropWeapon(player, bool)</code> - Should player drop weapon on death?  </p>
+<h2 id="entity-related">Entity-related<a class="headerlink" href="#entity-related" title="Permanent link">&para;</a></h2>
+<p><code>_EntSetMaterial(entid, material_filename)</code> - Set the material of specified entity.<br />
+<code>_EntSetGravity(entid, gravity)</code> - Set the gravity for specified entity.<br />
+<code>_EntGetType(entid)</code> - Returns a entity type name.<br />
+<code>_EntGetByName(name)</code> - Returns an entity by target name (0 if not found).<br />
+<code>_EntGetPos(entid)</code> - Returns a vector representing the position of the entity.<br />
+<code>_EntEmitSound(entid, filename)</code> - Make entity emit sound.<br />
+<code>_EntEmitSoundEx(entid, filename, volume_multiplier, pitch_multiplier)</code> - Make entity emit sound.<br />
+<code>_EntSetPos(entid, vector3 pos)</code> - Sets the position of the entity.<br />
+<code>_EntGetVelocity(entid)</code> - Gets the entity velocity. Returned as a vector3.<br />
+<code>_EntSetVelocity(entid, vector3_velocity)</code> - Sets the velocity of the entity.<br />
+<code>_EntGetForwardVector(entid)</code> - Returns the forward vector.<br />
+<code>_EntGetRightVector(entid)</code> - Returns the right vector.<br />
+<code>_EntGetUpVector(entid)</code> - Returns the up vector.<br />
+<code>_EntFire(entid, action, value, delay)</code> - ent_fire an entity.<br />
+<code>_EntCreate(entname)</code> - Creates but doesn&rsquo;t spawn specified entity.<br />
+<code>_EntSpawn(entindex)</code> - Spawns specified entity.<br />
+<code>_EntActivate(entindex)</code> - Activate an entity.<br />
+<code>_EntSetKeyValue(entindex, string_keyname, string_keyvalue)</code> - Sets an entity keyvalue (Must be done before spawning!).<br />
+<code>_EntSetModel(ent, model_name)</code> - Sets the model of an entity. PRE-CACHE THE MODEL FIRST.<br />
+<code>_EntSetOwner(ent, ownerid)</code> - Sets the owner.<br />
+<code>_EntGetOwner(ent)</code> - Gets the entity&rsquo;s owner.<br />
+<code>_EntRemove(entindex)</code> - Removes entity..<br />
+<code>_EntExists(entindex)</code> - Check if entity exists.<br />
+<code>_EntPrecacheModel(model_name)</code> - Pre-caches a model.<br />
+<code>_EntSetAng(entid, vector3_ang)</code> - Sets the angle of the entity (using a forward vector).<br />
+<code>_EntSetAngAngle(entid, vector3_angle)</code> - Sets the ANGLE of the entity.<br />
+<code>_EntGetAng(entid)</code> - Returns the angle as a normalized &lsquo;forward&rsquo; vector.<br />
+<code>_EntGetAngAngle(entid)</code> - Returns the angle as a vector3.<br />
+<code>_EntGetModel(entid)</code> - Returns the entity&rsquo;s model name.<br />
+<code>_EntitiesFindByClass(classname)</code> - Returns a table of entities (or nil if none).<br />
+<code>_EntitiesFindInSphere(vector_position, radius)</code> - Returns a table of entities contained in the sphere.<br />
+<code>_EntitiesFindByName(targetname)</code> - Returns a table of entities (or nil if none).<br />
+<code>_EntityGetPhysicsAttacker(entity)</code> - Returns the last physics attacker.<br />
+<code>_EntitySetPhyscsAttacker(entity, attacker)</code> - Sets the physics attacker on a specified object.<br />
+<code>_EntSetGroundEntity(entity, groundentity)</code> - Pass entity as -1 to clear the ground entity.<br />
+<code>_EntGetGroundEntity(entity, groundentity)</code> - Pass entity as -1 to clear the ground entity.<br />
+<code>_EntSetMoveType(entity, type)</code> - Sets the movetype.<br />
+<code>_EntGetMoveType(entity)</code> - Gets the movetype.<br />
+<code>_EntSetMoveCollide(entity, type)</code> - Sets the movecollide.<br />
+<code>_EntGetMoveCollide(entity)</code> - Gets the movecollide.<br />
+<code>_EntSetSolid(entity, type)</code> - Sets the solid type.<br />
+<code>_EntGetSolid(entity)</code> - Gets the solid type.<br />
+<code>_EntSetCollisionGroup(entity, group)</code> - Sets the collision group.<br />
+<code>_EntGetCollisionGroup(entity)</code> - Gets the collision group.<br />
+<code>_EntGetWaterLevel(entity)</code> - Returns a number representing how under water an entity is. 0 means not underwater. 3 is totally underwater.<br />
+<code>_EntSetActivity(entid, int_sequence)</code> - Sets anactivity for an ent. Works for NPC&rsquo;s only.<br />
+<code>_EntGetDisposition(npc, entity)</code> - Gets an enemy disposition.<br />
+<code>_EntSetParent(entid, parent, attachment)</code> - Sets an entities parent.<br />
+<code>_EntGetParent(entid)</code> - Gets an entities parent.<br />
+<code>_EntGetName(entid)</code> - Gets an entities name.<br />
+<code>_EntSetName(entid, name)</code> - Sets an entities name.<br />
+<code>_EntSetMaxHealth(entid, health)</code> - Gets entity max health.<br />
+<code>_EntGetMaxHealth(entid)</code> - Sets entity max health.  </p>
+<h2 id="effects-related">Effects-related<a class="headerlink" href="#effects-related" title="Permanent link">&para;</a></h2>
+<p><code>_EffectInit()</code> - Resets the effect data<br />
+<code>_EffectSetOrigin(vector)</code><br />
+<code>_EffectSetAngles(vector)</code><br />
+<code>_EffectSetNormal(vector)</code><br />
+<code>_EffectSetStart(vector)</code><br />
+<code>_EffectSetEnt(entid)</code><br />
+<code>_EffectSetFlags(int)</code><br />
+<code>_EffectSetScale(float)</code><br />
+<code>_EffectSetMagnitude(float)</code><br />
+<code>_EffectSetRadius(float)</code><br />
+<code>_EffectSetAttachIndex(int)</code><br />
+<code>_EffectDispatch(name)</code>  </p>
+<h2 id="file-manipulation">File manipulation<a class="headerlink" href="#file-manipulation" title="Permanent link">&para;</a></h2>
+<p><code>_file.Exists(filename)</code> - Returns true if file exists.<br />
+<code>_file.Read(filename)</code> - Reads a file into a string.<br />
+<code>_file.Write(filename, string)</code> - Writes a string to a file.<br />
+<code>_file.CreateDir(folder)</code> - Creates Dir Hierarchy.<br />
+<code>_file.IsDir(folder)</code> - Returns true if is Dir.<br />
+<code>_file.Find(wildcard)</code> - Finds files, returns table, parameter should be like &ldquo;maps/-.bsp&rdquo;.<br />
+<code>_file.Delete(wildcard)</code> - Deletes specified file.<br />
+<code>_file.Rename(before, after)</code> - Renames specified file.<br />
+<code>_ForceFileConsistency(filename)</code> - Force the file to be the same on client and server. Should be called after pre-caching the file.  </p>
+<h2 id="server-related">Server-related<a class="headerlink" href="#server-related" title="Permanent link">&para;</a></h2>
+<p><code>_StartNextLevel(map_name)</code> - Starts the next level.<br />
+<code>_GetNextMap()</code> - Returns next map name.<br />
+<code>_GetCurrentMap()</code> - Returns current map name.<br />
+<code>_GetRule(rule_string)</code> - Gets a rule.<br />
+<code>_ServerCommand(command)</code> - Runs a console command. Don&rsquo;t forget to put <code>\n</code> in the end.<br />
+<code>_GameSetTargetIDRules(int_rule)</code> - Sets targetID rules.<br />
+<code>_PluginMsg(playerid, title, message, time, r, g, b, a, level)</code> - Sends a plugin message.<br />
+<code>_PluginText(playerid, title, message, time, r, g, b, a, level)</code> - Sends plug in text.<br />
+<code>_GetConVar_Float(name)</code> - Get a server convar float.<br />
+<code>_GetConVar_String(name)</code> - Get a server convar string.<br />
+<code>_GetConVar_Bool(name)</code> - Get a server convar bool.<br />
+<code>_GetClientConVar_String(playerid, name)</code> - Get a client convar string.<br />
+<code>_CurTime()</code> - Returns the current time in seconds.<br />
+<code>_MaxPlayers()</code> - Returns the max players in the server.<br />
+<code>_RunString(command)</code> - Runs a command in the main gameplay script.<br />
+<code>_GetModPath()</code> - Gets the path to the gmod folder (on the server). No trailing slash.<br />
+<code>_IsDedicatedServer()</code> - Returns whether dedicated server or not.<br />
+<code>_Msg(message)</code> - Outputs message to console.<br />
+<code>_OpenScript(filename)</code> - Opens a script.<br />
+<code>_ALERT(message)</code> - Internal Lua usage. Outputs error message.  </p>
+<h2 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h2>
+<p><code>_TraceAttack(victim, inflictor, attacker, amount)</code> - Attack using the last trace.<br />
+<code>_TraceSetCollisionGroup(group)</code> - Sets the collision group for the next trace to use. 
+<code>_TraceSetMask(group)</code> - Sets the MASK_ to use for the next trace.<br />
+<code>_TraceLine(vector_start, vector_direction, length, ignore)</code> - Traces a line. <code>ignore</code> is optional.<br />
+<code>_TraceEndPos()</code> - Return the end pos from the last trace.<br />
+<code>_TraceFraction()</code> - Return the fraction of trace completed.<br />
+<code>_TraceHitWorld()</code> - Return the true if the last trace hit the world.<br />
+<code>_TraceHitNonWorld()</code> - Return the true if the last trace hit non world.<br />
+<code>_TraceHit()</code> - Return the true if the last trace hit something.<br />
+<code>_TraceGetEnt()</code> - Return the entity that the last trace hit.<br />
+<code>_TraceGetSurfaceNormal</code> - Return the normal of the surface that the trace hit.<br />
+<code>_TraceDidHitSky()</code> - Returns true if last hit was the sky.<br />
+<code>_TraceDidHitHitbox()</code> - Returns true if last hit was some kind of hitbox.<br />
+<code>_TraceGetTexture()</code> - Returns the name of the texture that we hit.<br />
+<code>_TraceDidHitWater()</code> - Returns true if we hit water.<br />
+<code>_MakeDecal(decal)</code> - Makes a decal using the last trace.<br />
+<code>PlayerLookTrace(playerid, length)</code> - Traces a line where player&rsquo;s looking  </p>
+<h2 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>
+<p><code>_PlaySound(sound_name)</code> - Play a sound.<br />
+<code>_PlaySoundPlayer(playerid, sound_name)</code> - Play a sound to a specific player.  </p>
+<h2 id="gmodtext">GModText<a class="headerlink" href="#gmodtext" title="Permanent link">&para;</a></h2>
+<p><code>_GModText_Start(font_name)</code> -  Initialize the text.<br />
+<code>_GModText_SetPos(x, y)</code> -  Set Position.<br />
+<code>_GModText_AllowOffscreen(bool)</code> -  Allow the text to go offscreen.<br />
+<code>_GModText_SetEntity(entindex)</code> -  Set entity to hover over.<br />
+<code>_GModText_SetColor(r, g, b, a)</code> -  Set Colour.<br />
+<code>_GModText_SetTime(duration, fadein, fadeout)</code> -  Set Times.<br />
+<code>_GModText_SetDelay(delay)</code> -  Set delay time.<br />
+<code>_GModText_SetText(text)</code> -  Set Times.<br />
+<code>_GModText_SetAdditive(bool)</code> -  Set Additive mode.<br />
+<code>_GModText_SetEntityOffset(vector)</code> -  Set entity offset to draw the text at.<br />
+<code>_GModText_Send(playerid, index)</code> -  If player is 0 it is sent to everyone. Index says which slot this text should fill.<br />
+<code>_GModText_Hide(playerid, index, fade_time, delay)</code> -  Hides specified text.<br />
+<code>_GModText_HideAll(playerid)</code> -  Hides All texts.<br />
+<code>_GModText_SendAnimate(playerid, index, length, ease)</code> -  The same as normal send but will animate from Send to the new values.  </p>
+<h2 id="gmodrect">GModRect<a class="headerlink" href="#gmodrect" title="Permanent link">&para;</a></h2>
+<p><code>_GModRect_Start(material)</code> -  Initialize the rect.<br />
+<code>_GModRect_SetPos(x, y, width, height)</code> -  Set Position.<br />
+<code>_GModRect_SetEntity(entindex)</code> -  Set entity to hover over.<br />
+<code>_GModRect_SetColor(r, g, b, a)</code> -  Set Colour.<br />
+<code>_GModRect_SetTime(duration, fadein, fadeout)</code>-  Set Times.<br />
+<code>_GModRect_SetDelay(delay)</code> -  Set delay time.<br />
+<code>_GModRect_SetAdditive(bool)</code> -  Set Additive mode.<br />
+<code>_GModRect_SetEntityOffset(vector)</code> -  Set entity offset to draw the text at.<br />
+<code>_GModRect_Send(playerid, index)</code> -  If player is 0 it is sent to everyone. Index says which slot this text should fill.<br />
+<code>_GModRect_SendAnimate(playerid, index, length, ease)</code> -  If player is 0 it is sent to everyone. Index says which slot this text should fill.<br />
+<code>_GModRect_Hide(playerid, index, fade_time, delay)</code> -  Hides specified rect.<br />
+<code>_GModRect_HideAll(playerid)</code> - Hides All rects.  </p>
+<h2 id="gmodquad">GModQuad<a class="headerlink" href="#gmodquad" title="Permanent link">&para;</a></h2>
+<p><code>_GModQuad_Hide(playerid, index, fade_time, delay)</code> -  Hides specified world quads.<br />
+<code>_GModQuad_HideAll(playerid)</code> -  Hides All world quads.<br />
+<code>_GModQuad_Start(material)</code> -  Initialize the quad.<br />
+<code>_GModQuad_SetVector(corner, vector)</code> -  Set a vector of one of the quad&rsquo;s corners. Acceptable <code>corner</code> values: 0-3.<br />
+<code>_GModQuad_SetTimings(delay, fadein, life, fadeout)</code> -  Set Timings.<br />
+<code>_GModQuad_SetEntity(entityid)</code> -  SetEntity to follow.<br />
+<code>_GModQuad_Send(playerid, index)</code> -  Send a quad to player. All players if player is 0.<br />
+<code>_GModQuad_SenAnimate(playerid, index, length, ease)</code> -  Send a quad to player. All players if player is 0.  </p>
+<h2 id="game-events">Game Events<a class="headerlink" href="#game-events" title="Permanent link">&para;</a></h2>
+<p><code>_gameevent.Start(name)</code> - Starts a (fake) gameevent.<br />
+<code>_gameevent.SetString(name, value)</code> - Set Variable.<br />
+<code>_gameevent.SetInt(name, value)</code> - Set Variable.<br />
+<code>_gameevent.Fire()</code> - Fire event.  </p>
+<h2 id="spawnmenu">Spawnmenu<a class="headerlink" href="#spawnmenu" title="Permanent link">&para;</a></h2>
+<p><code>_spawnmenu.AddItem(playerid, category, name, modelent)</code><br />
+<code>_spawnmenu.RemoveCategory(playerid, category)</code><br />
+<code>_spawnmenu.RemoveAll(playerid)</code><br />
+<code>_spawnmenu.SetCategory(playerid, category)</code>  </p>
+<h2 id="npc-related">NPC-related<a class="headerlink" href="#npc-related" title="Permanent link">&para;</a></h2>
+<p><code>_SetDefaultRelationship(class, class, disposition)</code> -  Sets the default relationship between two life types.<br />
+<code>_npc.ExitScriptedSequence(ent)</code><br />
+<code>_npc.SetSchedule(end, sched)</code><br />
+<code>_npc.SetLastPosition(ent, vector)</code><br />
+<code>_npc.AddRelationship(ent, ent, disposition, priority)</code> - <code>priority</code> is int  </p>
+<h2 id="physics-related">Physics-related<a class="headerlink" href="#physics-related" title="Permanent link">&para;</a></h2>
+<p><code>_phys.EnableMotion(entid, boo)</code> - Enable/Disable motion.<br />
+<code>_phys.EnableDrag(entid, bool)</code> - Enable/Disable drag.<br />
+<code>_phys.EnableGravity(entid, bool)</code> - Enable/Disable gravity.<br />
+<code>_phys.EnableCollisions(entid, bool)</code> - Enable/Disable Collisions.<br />
+<code>_phys.GetMass(entid)</code> - Gets mass.<br />
+<code>_phys.SetMass(entid, mass)</code> - Sets mass.<br />
+<code>_phys.Sleep(entid)</code> - Make object sleep.<br />
+<code>_phys.Wake(entid)</code> - Wake a sleeping object.<br />
+<code>_phys.IsAsleep(entid)</code> - Check whatever object is rested.<br />
+<code>_phys.HasPhysics(entid)</code> - Returns true if entity has a physics object.<br />
+<code>_phys.ConstraintSetEnts(constraint, entity_1, entity_2)</code> - Set Entities for constraint.<br />
+<code>_phys.ApplyForceCenter(entid, force)</code> - Pushes an object from the center. <code>force</code> is vector3.<br />
+<code>_phys.ApplyForceOffset(entid, force, worldpos)</code> - Pushes an object from the center. <code>force</code> and <code>worldpos</code> are vector3.<br />
+<code>_phys.ApplyTorqueCenter(entid, force)</code> - Apply torque to the object. <code>force</code> is vector3.  </p>
+<h2 id="team-related">Team-related<a class="headerlink" href="#team-related" title="Permanent link">&para;</a></h2>
+<p><code>_TeamAddScore(teamid, score)</code> - Add score for a team.<br />
+<code>_TeamSetScore(teamid, score)</code> - Set score for a team.<br />
+<code>_TeamNumPlayers(teamid)</code> - Get the number of players on a team.<br />
+<code>_TeamCount()</code> - Returns the number of teams
+<code>_TeamScore(teamid)</code> - Returns the total team score.<br />
+<code>_TeamSetName(teamid, name)</code> - Sets the name of the team.  </p>
+<h2 id="utilities">Utilities<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
+<p><code>_util.PlayerByName(name)</code> - Returns playerid of player with name.<br />
+<code>_util.PlayerByUserId(playerid)</code> - Returns playerid.<br />
+<code>_util.EntsInBox(min, max)</code> - Returns entities contained in a box. <code>min</code> and <code>max</code> are vectors.<br />
+<code>_util.DropToFloor(ent)</code> - Drops entity to floor.<br />
+<code>_util.ScreenShake(pos, amp, frequency, duration, radius)</code> - Shakes screen.<br />
+<code>_util.PointAtEntity(ent1, ent2)</code> - Point one entity towards the other.  </p>
+<h2 id="swep-related">SWEP-related<a class="headerlink" href="#swep-related" title="Permanent link">&para;</a></h2>
+<p>All these function are only used when making SWEPs, check SWEP part.<br />
+<code>_WeaponScriptedAssign(weapon, script)</code> Assign a script to a scripted weapon.<br />
+<code>_SWEPSetSound(weapon_index, action, sound)</code> Sets SWEP sound.<br />
+<code>_SWEPUseAmmo(weapon_index, clip[0|1], amount)</code> Takes ammo from SWEP gun.<br />
+<code>_SWEPUpdateVariables(weapon_index)</code> Re-reads all the &lsquo;fetch&rsquo; variables. You should call this if you have changed the accuracy etc.<br />
+<code>_SWEPRunString(weapon_index, string)</code> Runs a Lua string in the weapon&rsquo;s Lua instance.<br />
+<code>_swep.GetClipAmmo(weapon_id, clip[0|1])</code> Get amount of ammo in a clip.<br />
+<code>_swep.SetClipAmmo(weapon_index, clip[0|1], clip)</code> Get amount of ammo in a clip.<br />
+<code>_swep.GetDeathIcon(weapon_index)</code> Gets death icon name.  </p>
+<h2 id="weapon-related">Weapon-related<a class="headerlink" href="#weapon-related" title="Permanent link">&para;</a></h2>
+<p><code>_WeaponSetModel(weapon_name, model_type, model_name)</code> Sets weapon model.<br />
+<code>_WeaponSetSlot(weapon_name, slot, pos)</code> - Sets weapon slot.<br />
+<code>_WeaponSetSound(weapon_name action, sound)</code> - Sets weapon sound.<br />
+<code>_WeaponSetFOV(weapon_name, fov)</code> - Sets a weapon&rsquo;s draw FOV.<br />
+<code>_WeaponFlipHands(weapon_name, bool)</code> - Flips a weapon&rsquo;s hands.<br />
+<code>_WeaponSetDamage(weapon_name, damage)</code> - Sets the damage that a bullet from this gun does.<br />
+<code>_WeaponSetup(weapon_name, anim_prefix, clip_size_1, clip_size_2, default_ammo_1, default_ammo_2, primary_ammo, secondary_ammo)</code> - Sets animation prefix.</p>
+<p>(thanks to the <a href="https://gmod9.github.io/lua-docs/">GMOD 9 lua docs</a> for the Lua reference)</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lua-main/" class="btn btn-neutral float-left" title="Main"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/TheLocalMoon/gmod9-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../lua-main/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
