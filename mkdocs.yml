@@ -7,6 +7,9 @@ nav:
         - Downloading: downloading.md
         - LAN: lan.md
         - Mods: modding.md
+    - Lua:
+        - Main: lua-main.md
+        - Cheatsheet: cheatsheet.md
 theme:
     name: readthedocs
     locale: en
