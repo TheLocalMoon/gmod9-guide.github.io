@@ -10,8 +10,20 @@ nav:
     - Lua:
         - Main: lua-main.md
         - Cheatsheet: cheatsheet.md
+    - Other:
+        - FAQ: faq.md
 theme:
     name: readthedocs
     locale: en
 repo_url: https://github.com/TheLocalMoon/gmod9-guide
 repo_name: GitHub
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: true
+    - footnotes
+    - admonition
+    - codehilite:
+        guess_lang: true
+        linenums: true
+    - attr_list

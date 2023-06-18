@@ -17,6 +17,5 @@ Additionally, the following resources can help you get started with Lua:
 
 1. [Official Lua Website](https://www.lua.org/): The official Lua website provides documentation, tutorials, and resources for beginners and experienced Lua developers.
 2. [Lua Tutorial on tutorialspoint](https://www.tutorialspoint.com/lua/index.htm): tutorialspoint offers a comprehensive Lua tutorial with interactive examples to help you understand the language fundamentals.
-3. [Cheatsheet](cheatsheet.md): the fastest way to learn Lua, with the GMOD 9 Lua included.
 
 With these resources, you'll be equipped to start your journey with Lua and explore its capabilities as a versatile scripting language. Happy scripting and creating mods for GMOD 9!

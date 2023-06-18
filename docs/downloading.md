@@ -8,7 +8,11 @@ In order to install Garry's Mod 9, you'll need to have **Source SDK Base 2006**,
 
 ![Filter by all](imgs/downloading/downloading-filter-by-all.png)
 
-Then click on the search bar and search for "*Source SDK Base 2006*", and click download/install. After you have installed it, do the following:
+Then click on the search bar and search for "*Source SDK Base 2006*", then click on Install:
+
+![Search results](imgs/downloading/downloading-search-ssb06.png)
+
+After you have installed it, do the following:
 ### ModDB
 Click the "Download Now" button, open the installer, and follow the instructions to install the mod. Just install it into your "*sourcemods*" folder in the steam/steamapps thing.
 ### gmod9.com
