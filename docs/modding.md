@@ -1,0 +1,2 @@
+# Mods
+In order to download mods for GMOD 9, all you need to do is to download the mod from [GameBanana](https://gamebanana.com/games/26), put it into your "*mods*" folder of the GMOD 9 path and BOOM! You have the mod installed. Even if it a map, you can just check if you did install it, and if not, you need to goto the mod folder, then find the map(s) you want to install, copy it/them and paste them into the "*maps*" folder of your GMOD 9 path.

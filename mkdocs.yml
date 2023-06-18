@@ -1,0 +1,14 @@
+site_name: GMOD 9 Guide
+site_description: The full guide for Garry's Mod 9!
+site_author: YourLocalMoon
+nav:
+    - Getting Started:
+        - Main: index.md
+        - Downloading: downloading.md
+        - LAN: lan.md
+        - Mods: modding.md
+theme:
+    name: readthedocs
+    locale: en
+repo_url: https://github.com/TheLocalMoon/gmod9-guide
+repo_name: GitHub
