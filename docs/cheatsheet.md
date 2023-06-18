@@ -1,7 +1,7 @@
 # Cheatsheet
 ## Overview
 
-Lua is a lightweight and flexible scripting language that is designed to be embedded in other programs. It has a simple syntax and is easy to learn, making it a popular choice for writing plugins and extensions. And also you can use it for Garry's Mod 9!
+Lua is a lightweight and flexible scripting language that is designed to be embedded in other programs. It has a simple syntax and is easy to learn, making it a popular choice for writing mods for Garry's Mod 9.
 
 ## Basic Syntax
 
@@ -9,6 +9,11 @@ Lua is a lightweight and flexible scripting language that is designed to be embe
 
 ```lua
 -- This is a comment
+
+--[[
+    This is a multiline comment,
+    and i can write more lines until infinity!
+]]--
 ```
 
 ### Variables
@@ -66,7 +71,7 @@ end
 
 ```lua
 while condition do
--- loop body
+-- loop body, the condition can be true to make it an infinite loop
 end
 ```
 
@@ -84,6 +89,10 @@ local b = 3.14
 ```lua
 local a = "Hello, World!"
 local b = 'Single quoted string'
+local c = [[
+    Multi-line string
+    I can also write lines until infinity here!
+]]
 ```
 
 ### Booleans
@@ -122,6 +131,7 @@ end
 
 ```lua
 local result = add(2, 3)
+-- print(result) outputs 5
 ```
 
 ### Anonymous Functions
@@ -169,7 +179,8 @@ function mylib.add(a, b)
     return a + b
 end
 
--- using the custom library
+-- using the custom library in another file
+local mylib = require('mylib')
 local result = mylib.add(2, 3)
 ```
 
