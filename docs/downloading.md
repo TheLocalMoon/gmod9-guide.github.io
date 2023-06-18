@@ -4,9 +4,13 @@ Garry's Mod 9 is available for free on these sources (well, actually it's free o
 - [ModDB](https://www.moddb.com/mods/garrys-mod/downloads/gmod-904)
 - [gmod9.com (fixed)](https://gmod9.com/download)
   
-In order to install, you need to have the **Source SDK Base 2006**, not above because it won't work. It is available in Steam, but not in the Steam store, in your Library. In the search field, search for "*Source SDK Base 2006*", and click download/install. After you installed, do the following:
+In order to install Garry's Mod 9, you'll need to have **Source SDK Base 2006**, not a newer version because it wouldn't work. It is available on Steam, but in the library, and in order to find it, make sure to filter by all:
+
+![Filter by all](imgs/downloading/downloading-filter-by-all.png)
+
+Then click on the search bar and search for "*Source SDK Base 2006*", and click download/install. After you have installed it, do the following:
 ### ModDB
-Open the installer, and follow the instructions to install the mod. Just install it into your "*sourcemods*" folder in the steam/steamapps thing.
+Click the "Download Now" button, open the installer, and follow the instructions to install the mod. Just install it into your "*sourcemods*" folder in the steam/steamapps thing.
 ### gmod9.com
 Just drag the folder from the archive to your "*sourcemods*" folder in the steam/steamapps thing.
 
